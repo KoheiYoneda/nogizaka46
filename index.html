@@ -114,9 +114,17 @@
 		{name:"吉田綾乃クリスティー",image:"yoshidaayanochristie_prof.jpg"},
 		{name:"与田祐希",image:"yodayuuki_prof.jpg"},
 		]
-		
+
 		var nogizaka46 = source;
 		var targetIndex = 0;
+
+		// すべての画像をプリロード
+		for(var i=0;i<nogizaka46.length;i++){
+			var obj = nogizaka46[i];
+			var imageUrl = "img/" + obj.image
+			console.log("<img src="+imageUrl+">");
+			$("<img src="+imageUrl+">");
+		}
 
 		randomPerson(nogizaka46);
 
