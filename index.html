@@ -29,7 +29,7 @@
 		</div>
 		<img class="face" src="" width="290" height="350"><br>
 		<div class="result">
-		<p class="name"></p>
+		<h2 class="name"></h2>
 		</div>
 	</div>
 	<script>
@@ -52,7 +52,7 @@
 			var obj = nogizaka46[randomIndex];
 			var imageUrl = "img/" + obj.image
 			$("img.face").attr("src",imageUrl);
-			$("p.name").html(""); // 前回の名前を削除
+			$("h2.name").html(""); // 前回の名前を削除
 		}
 		// phpではフォルダ以下のファイル名を取得できるようだが、
 		// javascriptではそれはできなさそうな感じだった
@@ -118,7 +118,7 @@
 		 $("button.display").click(function(e){
 		 	// インデックスに当たる名前を表示
 		 	var obj = nogizaka46[targetIndex]; 
-		 	$("p.name").html(obj.name);
+		 	$("h2.name").html(obj.name);
 		 });
 		 // buttonタグのうちselectokクラスのものがクリックされたら
 		 $("button.selectok").click(function(e){

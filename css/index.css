@@ -22,7 +22,7 @@ p{
 	display: inline;
 }
 .setting{
-	background-color: #DEDEDE;
+	background-color: #FFFFFF;
 	border:1px solid #CACACA;
 	width: 270px;
 	padding: 10px;
@@ -46,9 +46,14 @@ p{
 /* 名前 */
 .name{
 	font-size: 30px;
-	text-align: center;
+	display: inline;
 }
 
 .result{
-	width: 290px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border:1px solid #CACACA;
+	width: 270px;
+	height: 40px;
+	padding: 10px;
 }
