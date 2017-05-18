@@ -4,6 +4,7 @@ body{
 	color:#666666;
 }
 
+
 p{
 	margin: 0px;
 	padding: 0px;
@@ -13,44 +14,41 @@ p{
 .contents{
 }
 
-.buttons{
-	width: 140px;
-	float:left;
+/* アコーディオンパネル */
+.accordion{
+	display: inline;
 }
-.next {
-	width: 120px;
-	height: 40px;
+.mode{
+	display: inline;
 }
-
-.display {
-	width: 120px;
-	height: 40px;
-}
-
-
 .setting{
 	background-color: #DEDEDE;
 	border:1px solid #CACACA;
-	width: 120px;
+	width: 270px;
 	padding: 10px;
-	float:left;
-	display:none;
 }
 
-.control-panel{
+/* 次へボタンと名前を表示ボタン */
+.buttons{
 	width: 290px;
+	margin: 10px 0px;
+}
+.next {
+	width: 140px;
+	height: 60px;
 }
 
-.result-panel{
-	width: 290px;
+.display {
+	width: 140px;
+	height: 60px;
 }
 
-.clearfix:after {
-    content:" ";
-    display:block;
-    clear:both;
-}
-
+/* 名前 */
 .name{
 	font-size: 30px;
+	text-align: center;
+}
+
+.result{
+	width: 290px;
 }

@@ -12,27 +12,24 @@
 <body>
 	<div class="contents">
 		<h1>乃木坂46の名前を覚えるツール</h1>
-		<h2 class="mode">モード(全員)</h2>
-		<div class="control-panel">
-			<div class="buttons">
-				<button class="next">次へ</button>
-				<button class="display">名前を表示</button><br><br>
-			</div>
-			<p class="accordion">開く</p>
-			<div class="setting">
-				<p>モード設定</p>
-				<select name="modelist" class="modelist">
-					<option value="1人目〜15人目">1人目〜15人目</option>
-					<option value="16人目〜31人目">16人目〜31人目</option>
-					<option value="31人目〜46人目">31人目〜46人目</option>
-					<option value="全員" selected="selected">全員</option>
-				</select><br>
-				<button class="selectok">決定</button><br>
-			</div>
+		<p class="accordion">▼</p><h2 class="mode">モード(全員)</h2>
+		<div class="setting">
+			<p>モード設定</p>
+			<select name="modelist" class="modelist">
+				<option value="1人目〜15人目">1人目〜15人目</option>
+				<option value="16人目〜31人目">16人目〜31人目</option>
+				<option value="31人目〜46人目">31人目〜46人目</option>
+				<option value="全員" selected="selected">全員</option>
+			</select><br>
+			<button class="selectok">決定</button><br>
 		</div>
-		<div class="result-panel">
-			<img class="face" src="" width="290" height="350"><br>
-			<p class="name"></p>
+		<div class="buttons">
+			<button class="next">次へ</button>
+			<button class="display">名前を表示</button><br>
+		</div>
+		<img class="face" src="" width="290" height="350"><br>
+		<div class="result">
+		<p class="name"></p>
 		</div>
 	</div>
 	<script>
@@ -135,9 +132,15 @@
 		 	else if(selected==="全員") nogizaka46 = source;
 		 });
 		});
-	$("p.accordion").click(function(){
-		$(this).toggleClass("aaa").next().slideToggle();
+
+	// アコーディオンによって設定パネルを開いたり閉じたり
+	$(".setting").hide();
+	$(".accordion").click(function(){
+		// 閉まっていたら開く
+		// 開いていたら閉める
+		$(".setting").slideToggle("slow");
+		$(this).toggleClass("active");
 	});
-	</script>
+</script>
 </body>
 </html>
