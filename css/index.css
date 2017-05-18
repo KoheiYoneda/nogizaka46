@@ -1,0 +1,55 @@
+body{
+	background-color:#ffffff;
+	font-size:14px;
+	color:#666666;
+}
+
+p{
+	margin: 0px;
+	padding: 0px;
+	color:#666666;
+}
+
+.contents{
+}
+
+.next {
+	width: 120px;
+	height: 40px;
+}
+
+.display {
+	width: 120px;
+	height: 40px;
+}
+
+.buttons{
+	width: 140px;
+	float:left;
+}
+
+.setting{
+	background-color: #DEDEDE;
+	border:1px solid #CACACA;
+	width: 120px;
+	padding: 10px;
+	float:left;
+}
+
+.control-panel{
+	width: 290px;
+}
+
+.result-panel{
+	width: 290px;
+}
+
+.clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+.name{
+	font-size: 30px;
+}
