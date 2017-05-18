@@ -18,8 +18,9 @@
 				<button class="next">次へ</button>
 				<button class="display">名前を表示</button><br><br>
 			</div>
+			<p class="accordion">開く</p>
 			<div class="setting">
-				<p>モード変更</p>
+				<p>モード設定</p>
 				<select name="modelist" class="modelist">
 					<option value="1人目〜15人目">1人目〜15人目</option>
 					<option value="16人目〜31人目">16人目〜31人目</option>
@@ -134,6 +135,9 @@
 		 	else if(selected==="全員") nogizaka46 = source;
 		 });
 		});
+	$("p.accordion").click(function(){
+		$(this).toggleClass("aaa").next().slideToggle();
+	});
 	</script>
 </body>
 </html>

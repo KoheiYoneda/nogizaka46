@@ -13,6 +13,10 @@ p{
 .contents{
 }
 
+.buttons{
+	width: 140px;
+	float:left;
+}
 .next {
 	width: 120px;
 	height: 40px;
@@ -23,10 +27,6 @@ p{
 	height: 40px;
 }
 
-.buttons{
-	width: 140px;
-	float:left;
-}
 
 .setting{
 	background-color: #DEDEDE;
@@ -34,6 +34,7 @@ p{
 	width: 120px;
 	padding: 10px;
 	float:left;
+	display:none;
 }
 
 .control-panel{
