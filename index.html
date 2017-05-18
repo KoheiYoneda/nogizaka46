@@ -95,6 +95,12 @@
 			// 現在のnogizaka46配列をもとにランダムインデックスを作成する
 			length = nogizaka46.length;
 			var randomIndex = Math.floor(Math.random()*length);
+			// randomIndexが前回のものと被らなくなるまでループ
+			var randomIndex = 0;
+			while(true){
+				randomIndex = Math.floor(Math.random()*length);
+				if(randomIndex!==targetIndex) break;
+			}
 			targetIndex = randomIndex;
 			// インデックスに当たる画像を表示
 			var obj = nogizaka46[randomIndex];
