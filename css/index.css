@@ -4,7 +4,6 @@ body{
 	color:#666666;
 }
 
-
 p{
 	margin: 0px;
 	padding: 0px;
@@ -45,7 +44,7 @@ p{
 
 /* 名前 */
 .name{
-	font-size: 30px;
+	font-size: 25px;
 	display: inline;
 }
 
