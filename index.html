@@ -122,6 +122,11 @@
 		 });
 		 // buttonタグのうちselectokクラスのものがクリックされたら
 		 $("button.selectok").click(function(e){
+		 	// アコーディオンを閉じる
+		 	var isOpen = $(".setting").is(":hidden");
+		 	if(isOpen===false){
+		 		$(".setting").hide();
+		 	}
 		 	var selected = $("select.modelist").val();
 		 	var text = "モード(" + selected + ")";
 		 	$("h2.mode").html(text);
@@ -141,6 +146,7 @@
 		// 開いていたら閉める
 		$(".setting").slideToggle("slow");
 		$(this).toggleClass("active");
+
 	});
 </script>
 </body>
