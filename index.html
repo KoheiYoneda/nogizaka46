@@ -37,6 +37,25 @@
 	<script>
 	// htmlを読み込んでから処理を実行する
 	$(function(){
+		// 人物の配列を与えると、その中からランダムで１つ選る。
+		// その後、html上に人物画像を表示してくれる関数
+		var randomPerson = function(nogizaka46){
+			// 現在のnogizaka46配列をもとにランダムインデックスを作成する
+			length = nogizaka46.length;
+			var randomIndex = Math.floor(Math.random()*length);
+			// randomIndexが前回のものと被らなくなるまでループ
+			var randomIndex = 0;
+			while(true){
+				randomIndex = Math.floor(Math.random()*length);
+				if(randomIndex!==targetIndex) break;
+			}
+			targetIndex = randomIndex;
+			// インデックスに当たる画像を表示
+			var obj = nogizaka46[randomIndex];
+			var imageUrl = "img/" + obj.image
+			$("img.face").attr("src",imageUrl);
+			$("p.name").html(""); // 前回の名前を削除
+		}
 		// phpではフォルダ以下のファイル名を取得できるようだが、
 		// javascriptではそれはできなさそうな感じだった
 		// javascriptで連想配列
@@ -90,23 +109,12 @@
 		]
 		var nogizaka46 = source;
 		var targetIndex = 0;
+
+		randomPerson(nogizaka46);
+
 		// buttonタグのうちnextクラスのものがクリックされたら
 		$("button.next").click(function(e){
-			// 現在のnogizaka46配列をもとにランダムインデックスを作成する
-			length = nogizaka46.length;
-			var randomIndex = Math.floor(Math.random()*length);
-			// randomIndexが前回のものと被らなくなるまでループ
-			var randomIndex = 0;
-			while(true){
-				randomIndex = Math.floor(Math.random()*length);
-				if(randomIndex!==targetIndex) break;
-			}
-			targetIndex = randomIndex;
-			// インデックスに当たる画像を表示
-			var obj = nogizaka46[randomIndex];
-			var imageUrl = "img/" + obj.image
-			$("img.face").attr("src",imageUrl);
-			$("p.name").html(""); // 前回の名前を削除
+			randomPerson(nogizaka46);
 		});
 		 // buttonタグのうちdisplayクラスのものがクリックされたら
 		 $("button.display").click(function(e){
