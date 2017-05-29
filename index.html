@@ -12,7 +12,7 @@
 <body>
 	<div class="contents">
 		<h1>乃木坂46の名前を覚えるツール</h1>
-		<p class="accordion">▼</p><h2 class="mode">モード(全員)</h2>
+		<h2 class="mode">▼モード(全員)</h2>
 		<div class="setting">
 			<p>モード設定</p>
 			<select name="modelist" class="modelist">
@@ -156,7 +156,7 @@
 		});
 		// アコーディオンによって設定パネルを開いたり閉じたり
 		$(".setting").hide();
-		$(".accordion").click(function(){
+		$("h2.mode").click(function(){
 		 // 閉まっていたら開く
 		 // 開いていたら閉める
 		 $(".setting").slideToggle("slow");

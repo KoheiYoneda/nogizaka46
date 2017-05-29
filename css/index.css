@@ -18,7 +18,10 @@ p{
 	display: inline;
 }
 .mode{
-	display: inline;
+	display:inline-block;
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 10px;
 }
 .setting{
 	background-color: #FFFFFF;
@@ -56,3 +59,9 @@ p{
 	height: 40px;
 	padding: 10px;
 }
+
+.mode:hover{
+	background-color: #E0E0E0;
+	cursor: pointer;
+}
+
